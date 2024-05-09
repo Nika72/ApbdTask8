@@ -186,7 +186,8 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<Emp> Task2()
         {
-            IEnumerable<Emp> result = null;
+            IEnumerable<Emp> result = Emps.Where(emp => emp.Job.Equals("Frontend programmer") && emp.Salary > 1000)
+                .OrderByDescending(emp => emp.Ename);
             return result;
         }
 

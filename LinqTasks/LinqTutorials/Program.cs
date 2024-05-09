@@ -13,6 +13,12 @@ namespace LinqTutorials
                 // Format and print each employee's name and job title to the console
                 Console.WriteLine($"{emp.Ename} - {emp.Job}");
             }
+
+            Console.WriteLine("\nTask 2: Frontend Programmers with Salary > 1000, ordered by name descending");
+            foreach (var emp in LinqTasks.Task2())
+            {
+                Console.WriteLine($"{emp.Ename} - {emp.Job} - ${emp.Salary}");
+            }
         }
     }
 }
