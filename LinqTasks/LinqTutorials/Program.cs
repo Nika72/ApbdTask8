@@ -30,12 +30,17 @@ namespace LinqTutorials
                 Console.WriteLine($"{emp.Ename} - ${emp.Salary}");
             }
 
-            Console.WriteLine("Task 5:");
+            Console.WriteLine("\nTask 5: Employee Names and Jobs");
             foreach (dynamic item in LinqTasks.Task5())
             {
                 Console.WriteLine($"{item.Nazwisko} - {item.Praca}");
             }
-            Console.WriteLine();
+
+            Console.WriteLine("\nTask 6: Employee Names, Jobs, and Department Names");
+            foreach (dynamic item in LinqTasks.Task6())
+            {
+                Console.WriteLine($"{item.Ename} - {item.Job} - {item.Dname}");
             }
         }
     }
+}
