@@ -71,6 +71,14 @@ namespace LinqTutorials
             }
 
             Console.WriteLine();
+            
+            Console.WriteLine("Task 11: Group Employees by Department");
+            foreach (dynamic group in LinqTasks.Task11())
+            {
+                Console.WriteLine($"{group.Name} - {group.NumOfEmployees}");
+            }
+
+            Console.WriteLine();
         }
     }
 }
