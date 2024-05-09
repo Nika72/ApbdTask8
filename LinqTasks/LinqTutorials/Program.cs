@@ -71,13 +71,47 @@ namespace LinqTutorials
             }
 
             Console.WriteLine();
-            
+
             Console.WriteLine("Task 11: Group Employees by Department");
             foreach (dynamic group in LinqTasks.Task11())
             {
                 Console.WriteLine($"{group.Name} - {group.NumOfEmployees}");
             }
 
+            Console.WriteLine();
+
+            Console.WriteLine("Task 12: Employees with Subordinates");
+            foreach (var emp in LinqTasks.Task12())
+            {
+                Console.WriteLine($"{emp.Ename} - {emp.Salary}");
+            }
+
+            Console.WriteLine();
+            
+            Console.WriteLine("Task 13: Number appearing odd times in an array");
+            int[] array = new[] { 1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1 };
+            Console.WriteLine(LinqTasks.Task13(array));
+            Console.WriteLine();
+
+            Console.WriteLine("Task 14: Departments with exactly 5 employees or none");
+            foreach (var dept in LinqTasks.Task14())
+            {
+                Console.WriteLine($"{dept.Dname} - {dept.Deptno}");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Task 15: Jobs containing 'A' with count > 2");
+            foreach (dynamic item in LinqTasks.Task15())
+            {
+                Console.WriteLine($"{item.Job} - {item.Count}");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Task 16: Select all from Emps and Depts");
+            foreach (dynamic item in LinqTasks.Task16())
+            {
+                Console.WriteLine($"{item.Ename} - {item.Job} - {item.Dname}");
+            }
             Console.WriteLine();
         }
     }
