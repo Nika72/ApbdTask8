@@ -270,7 +270,13 @@ namespace LinqTutorials
         public static Emp Task9()
         {
             Emp result = null;
-            return result;
+
+            result = Emps
+                .Where(emp => emp.Job == "Frontend programmer") 
+                .OrderByDescending(emp => emp.HireDate)          
+                .FirstOrDefault();                             
+
+            return result;  
         }
 
         /// <summary>

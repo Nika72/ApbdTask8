@@ -41,16 +41,29 @@ namespace LinqTutorials
             {
                 Console.WriteLine($"{item.Ename} - {item.Job} - {item.Dname}");
             }
-            
+
             Console.WriteLine("\nTask 7: Job Counts");
             foreach (dynamic item in LinqTasks.Task7())
             {
                 Console.WriteLine($"{item.Praca} - {item.LiczbaPracownikow}");
             }
-            
+
             Console.WriteLine("\nTask 8: Is there at least one Backend programmer?");
             bool hasBackendProgrammer = LinqTasks.Task8();
             Console.WriteLine(hasBackendProgrammer ? "Yes" : "No");
+            
+            Console.WriteLine("Task 9: Most Recently Hired Frontend Programmer");
+            var resultTask9 = LinqTasks.Task9();
+            if (resultTask9 != null)
+            {
+                Console.WriteLine($"{resultTask9.Ename} - {resultTask9.HireDate}");
+            }
+            else
+            {
+                Console.WriteLine("No Frontend Programmer found.");
+            }
+
+            Console.WriteLine();
         }
     }
 }
