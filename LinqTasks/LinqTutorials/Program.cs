@@ -41,6 +41,12 @@ namespace LinqTutorials
             {
                 Console.WriteLine($"{item.Ename} - {item.Job} - {item.Dname}");
             }
+            
+            Console.WriteLine("\nTask 7: Job Counts");
+            foreach (dynamic item in LinqTasks.Task7())
+            {
+                Console.WriteLine($"{item.Praca} - {item.LiczbaPracownikow}");
+            }
         }
     }
 }

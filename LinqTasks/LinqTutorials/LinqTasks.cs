@@ -231,7 +231,7 @@ namespace LinqTutorials
                 Depts, 
                 emp => emp.Deptno, 
                 dept => dept.Deptno, 
-                (emp, dept) => new { emp.Ename, emp.Job, dept.Dname } // Result selector
+                (emp, dept) => new { emp.Ename, emp.Job, dept.Dname } 
             );
 
             return result;
@@ -242,7 +242,13 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<object> Task7()
         {
-            IEnumerable<object> result = null;
+            IEnumerable<object> result = Emps
+                .GroupBy(emp => emp.Job)
+                .Select(group => new 
+                { 
+                    Praca = group.Key, 
+                    LiczbaPracownikow = group.Count() 
+                });
             return result;
         }
 
