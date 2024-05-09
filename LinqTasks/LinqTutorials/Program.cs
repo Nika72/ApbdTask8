@@ -51,7 +51,7 @@ namespace LinqTutorials
             Console.WriteLine("\nTask 8: Is there at least one Backend programmer?");
             bool hasBackendProgrammer = LinqTasks.Task8();
             Console.WriteLine(hasBackendProgrammer ? "Yes" : "No");
-            
+
             Console.WriteLine("Task 9: Most Recently Hired Frontend Programmer");
             var resultTask9 = LinqTasks.Task9();
             if (resultTask9 != null)
@@ -61,6 +61,13 @@ namespace LinqTutorials
             else
             {
                 Console.WriteLine("No Frontend Programmer found.");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Task 10: Select and Union Operation");
+            foreach (dynamic item in LinqTasks.Task10())
+            {
+                Console.WriteLine($"{item.Ename} - {item.Job} - {item.HireDate}");
             }
 
             Console.WriteLine();
