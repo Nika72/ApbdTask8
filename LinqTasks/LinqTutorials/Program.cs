@@ -23,6 +23,19 @@ namespace LinqTutorials
             Console.WriteLine("\nTask 3: Maximum Salary");
             int maxSalary = LinqTasks.Task3();
             Console.WriteLine($"The highest salary is ${maxSalary}");
+
+            Console.WriteLine("\nTask 4: Employees with Maximum Salary");
+            foreach (var emp in LinqTasks.Task4())
+            {
+                Console.WriteLine($"{emp.Ename} - ${emp.Salary}");
+            }
+
+            Console.WriteLine("Task 5:");
+            foreach (dynamic item in LinqTasks.Task5())
+            {
+                Console.WriteLine($"{item.Nazwisko} - {item.Praca}");
+            }
+            Console.WriteLine();
+            }
         }
     }
-}

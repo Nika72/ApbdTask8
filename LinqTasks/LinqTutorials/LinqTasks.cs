@@ -206,7 +206,8 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<Emp> Task4()
         {
-            IEnumerable<Emp> result = null;
+            int maxSalary = Emps.Max(emp => emp.Salary); 
+            IEnumerable<Emp> result = Emps.Where(emp => emp.Salary == maxSalary); 
             return result;
         }
 
@@ -215,7 +216,7 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<object> Task5()
         {
-            IEnumerable<object> result = null;
+            IEnumerable<object> result = Emps.Select(emp => new { Nazwisko = emp.Ename, Praca = emp.Job });
             return result;
         }
 
