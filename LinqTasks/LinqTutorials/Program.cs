@@ -19,6 +19,10 @@ namespace LinqTutorials
             {
                 Console.WriteLine($"{emp.Ename} - {emp.Job} - ${emp.Salary}");
             }
+
+            Console.WriteLine("\nTask 3: Maximum Salary");
+            int maxSalary = LinqTasks.Task3();
+            Console.WriteLine($"The highest salary is ${maxSalary}");
         }
     }
 }
