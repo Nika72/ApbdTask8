@@ -258,8 +258,9 @@ namespace LinqTutorials
         /// </summary>
         public static bool Task8()
         {
-            bool result = false;
-            return result;
+            bool result = false;  
+            result = Emps.Any(emp => emp.Job == "Backend programmer");  
+            return result;  
         }
 
         /// <summary>

@@ -47,6 +47,10 @@ namespace LinqTutorials
             {
                 Console.WriteLine($"{item.Praca} - {item.LiczbaPracownikow}");
             }
+            
+            Console.WriteLine("\nTask 8: Is there at least one Backend programmer?");
+            bool hasBackendProgrammer = LinqTasks.Task8();
+            Console.WriteLine(hasBackendProgrammer ? "Yes" : "No");
         }
     }
 }
